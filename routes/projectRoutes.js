@@ -29,13 +29,12 @@ router.get("/:id", (req, res) => {
 
 //Creating a new Project ❌
 router.post("/", (req, res) => {
-  const newProject = req.body;
-  console.log(req.body);
-  if (!newProject.name || !newProject.description) {
+  console.log("\n", req.body);
+  if (!req.body.name || !req.body.description) {
     res.status(400).json({ Error: "Name and body required" });
   } else {
     projects
-      .insert(newProject)
+      .insert(req.body)
       .then(project => {
         res.status(201).json(project);
       })

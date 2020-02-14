@@ -1,10 +1,12 @@
 const express = require("express");
 const helmet = require("helmet");
+const bodyParser = require("body-parser");
 const server = express();
 const actionRoutes = require("./routes/actionRoutes");
 const projectRoutes = require("./routes/projectRoutes");
 require("dotenv").config();
 
+server.use(bodyParser.urlencoded({ extended: true }));
 server.use("/api/projects", logger, projectRoutes);
 server.use("/api/actions", logger, actionRoutes);
 server.use(helmet());
