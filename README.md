@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+- It's a lightweight framework used to develop API's
+- You can use `npx express-generator` to create a basic project setup
+
 - [ ] Describe Middleware?
+
+- Middleware is a set of actions that are completed either before or after a request is called
 
 - [ ] Describe a Resource?
 
+- Something installed from a node module?
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+- Status codes can be returned to indicate a successful API request
+
 - [ ] How can we partition our application into sub-applications?
+
+- Using routing we can organize our application based on specific routes
 
 ## Minimum Viable Product
 
