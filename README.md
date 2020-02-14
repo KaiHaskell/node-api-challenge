@@ -49,7 +49,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Describe a Resource?
 
-- Something installed from a node module?
+- Resources are returned from the API upon successful request.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
