@@ -50,12 +50,13 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   const id = req.params.id;
   const updateProject = req.body;
+  console.log(req.body);
   if (!id) {
     res
       .status(404)
       .json({ Error: "The project with the specified ID does not exist." });
-  } else if (!updateProject.name || !updateProject.body) {
-    res.status(400).json({ Erro: "Please provide a name and description" });
+  } else if (!updateProject.name || !updateProject.description) {
+    res.status(400).json({ Error: "Please provide a name and description" });
   } else {
     projects
       .update(id, updateProject)

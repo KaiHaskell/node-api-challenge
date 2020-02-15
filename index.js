@@ -7,6 +7,7 @@ const projectRoutes = require("./routes/projectRoutes");
 require("dotenv").config();
 
 server.use(bodyParser.urlencoded({ extended: true }));
+server.use(bodyParser.json());
 server.use("/api/projects", logger, projectRoutes);
 server.use("/api/actions", logger, actionRoutes);
 server.use(helmet());
